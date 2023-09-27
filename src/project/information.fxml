@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" prefHeight="431.0" prefWidth="556.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <BorderPane prefHeight="445.0" prefWidth="559.0" style="-fx-background-color: #000000;">
+         <top>
+            <MenuBar prefHeight="29.0" prefWidth="503.0" BorderPane.alignment="CENTER">
+               <menus>
+                  <Menu mnemonicParsing="false" text="Help">
+                     <items>
+                        <MenuItem fx:id="about" mnemonicParsing="false" onAction="#about" text="About" />
+                        <MenuItem fx:id="help" mnemonicParsing="false" onAction="#help" text="Help" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+         </top>
+         <center>
+            <AnchorPane prefHeight="463.0" prefWidth="556.0" style="-fx-background-image: url('/project/background.png');" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="48.0" layoutY="14.0" prefHeight="57.0" prefWidth="462.0" text="Please enter your Information" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman" size="38.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="loginlabel" layoutX="161.0" layoutY="340.0" prefHeight="17.0" prefWidth="235.0" />
+                  <Label fx:id="incomeLabel" layoutX="81.0" layoutY="104.0" text="Total Income" textFill="WHITE" />
+                  <Label fx:id="savLabel" layoutX="81.0" layoutY="162.0" text="Savings Goal" textFill="WHITE" />
+                  <Label fx:id="expenseLabel" layoutX="81.0" layoutY="229.0" text="Expenses" textFill="WHITE" />
+                  <TextField fx:id="income" layoutX="229.0" layoutY="99.0" promptText="Amount" />
+                  <TextField fx:id="savings" layoutX="229.0" layoutY="157.0" promptText="Amount" />
+                  <TextField fx:id="expensetype" layoutX="170.0" layoutY="224.0" prefHeight="27.0" prefWidth="137.0" promptText="Expense Type" />
+                  <TextField fx:id="expenseamount" layoutX="322.0" layoutY="224.0" prefHeight="27.0" prefWidth="149.0" promptText="Enter Amount Spend " />
+                  <Button fx:id="createchart" layoutX="441.0" layoutY="285.0" mnemonicParsing="false" onAction="#createChart" text="Create" />
+                  <Button fx:id="addexpense" layoutX="481.0" layoutY="224.0" mnemonicParsing="false" onAction="#addExpense" text="Add" />
+                  <Label layoutX="81.0" layoutY="340.0" text="In Doubt? Try Our Standard Template" textFill="WHITE" />
+                  <Button fx:id="standardtemplate" layoutX="338.0" layoutY="335.0" mnemonicParsing="false" onAction="#standardTemplate" text="Standard Template" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</GridPane>
